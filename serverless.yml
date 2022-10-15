@@ -13,4 +13,5 @@ functions:
     handler: handler.hello
 
 plugins:
-  - serverless-offline
+  - serverless-python-requirements
+
