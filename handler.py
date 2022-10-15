@@ -1,13 +1,8 @@
-import json
 from spellchecker import SpellChecker
 
 spell = SpellChecker()
 
-def hello(event: dict, context):
-
-
-    body = {
-        "correction": spell.correction(event["word"]),
+def correct_word(event: dict, _):
+    return {
+        "correction": spell.correction(event.get("word"))
     }
-
-    return {"statusCode": 200, "body": json.dumps(body)}
