@@ -1,4 +1,3 @@
-org: khabazbashi
 app: spellcorrection-lambda
 service: spellcorrection-lambda
 
@@ -14,4 +13,3 @@ functions:
 
 plugins:
   - serverless-python-requirements
-
