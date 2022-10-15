@@ -1,10 +1,13 @@
 import json
+from spellchecker import SpellChecker
+
+spell = SpellChecker()
+
+def hello(event: dict, context):
 
 
-def hello(event, context):
     body = {
-        "message": "Go Serverless v3.0! Your function executed successfully!",
-        "input": event,
+        "correction": spell.correction(event["word"]),
     }
 
     return {"statusCode": 200, "body": json.dumps(body)}
